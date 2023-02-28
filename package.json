@@ -1,0 +1,100 @@
+{
+  "name": "react-cloud-music",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "new:client:component": "hygen component new",
+    "new:client:page": "hygen page new",
+    "new:client:layout": "hygen layout new",
+    "new:client:container": "hygen container new",
+    "client:start": "react-app-rewired start",
+    "client:build": "react-app-rewired build",
+    "client:test": "react-app-rewired test",
+    "client:report": "react-app-rewired build --analyze",
+    "client:storybook:start": "start-storybook -p 9009 -s public",
+    "client:storybook:build": "build-storybook -s public",
+    "server:dev:start": "node server.js",
+    "server:prod:start": "pm2 start ./server.js --name react-cloud-music",
+    "server:prod:stop": "pm2 stop react-cloud-music",
+    "server:prod:restart": "pm2 restart react-cloud-music",
+    "server:prod:status": "pm2 describe react-cloud-music",
+    "api:dev:start": "cd NeteaseCloudMusicApi && yarn start",
+    "api:prod:start": "pm2 start ./NeteaseCloudMusicApi/app.js --name cloud-music-api",
+    "api:prod:stop": "pm2 stop cloud-music-api",
+    "api:prod:restart": "pm2 restart cloud-music-api",
+    "api:prod:status": "pm2 describe cloud-music-api",
+    "pm2:monit": "pm2 monit",
+    "git:commit": "git-cz"
+  },
+  "dependencies": {
+    "@types/qs": "^6.9.4",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "@types/react-lazyload": "^2.6.0",
+    "@types/react-router-dom": "^5.1.5",
+    "@types/react-transition-group": "^4.4.0",
+    "@types/styled-components": "^5.1.2",
+    "ahooks": "^2.4.0",
+    "aw-easy-storage": "^0.0.1",
+    "axios": "^0.19.2",
+    "better-scroll": "^2.0.0-beta.10",
+    "compression": "^1.7.4",
+    "create-keyframe-animation": "^0.1.0",
+    "express": "^4.17.1",
+    "mitt": "^2.1.0",
+    "qs": "^6.9.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-lazyload": "^3.0.0",
+    "react-router-dom": "^5.2.0",
+    "react-spring": "^8.0.27",
+    "react-transition-group": "^4.4.1",
+    "styled-components": "^5.1.1",
+    "swiper": "^6.1.1",
+    "unstated-next": "^1.1.0",
+    "use-immer": "^0.4.1"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-links": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/preset-create-react-app": "^3.1.4",
+    "@storybook/react": "^5.3.19",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^24.0.0",
+    "@types/node": "^12.0.0",
+    "babel-plugin-styled-components": "^1.11.1",
+    "commitizen": "^4.1.2",
+    "cra-define-override": "^1.0.0",
+    "customize-cra": "^1.0.0",
+    "cz-conventional-changelog": "^3.2.0",
+    "http-proxy-middleware": "^1.0.5",
+    "pm2": "^4.4.0",
+    "react-app-rewired": "^2.1.6",
+    "react-scripts": "3.4.1",
+    "typescript": "~3.7.2",
+    "webpack-bundle-analyzer": "^3.8.0"
+  }
+}
